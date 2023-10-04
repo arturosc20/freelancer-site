@@ -32,11 +32,13 @@ Ahra 1rem = 10 px
 html {
     font-size: 62.5%;
     box-sizing: border-box;
+    scroll-snap-type: y mandatory;
 }
 
 body {
     font-size: 16px;
     font-family: krub, sans-serif;
+    background-image: linear-gradient(to top, var(--gray-light) 0%, var(--white) 100%);
 }
 
 *,
@@ -46,7 +48,7 @@ body {
 }
 
 .container {
-    max-width: 120 rem;
+    max-width: 120rem;
     /* margin: 0 arriba, auto derecha, a abajo, auto izquierda */
     margin: 0 auto;
 }
@@ -277,3 +279,12 @@ h3 {
 .footer {
     text-align: center;
 }
+
+@media (min-width: 768px) {
+    .services,
+    .navigation-main,
+    .form {
+      scroll-snap-align: center;
+      scroll-snap-stop: always;
+    }
+  }
